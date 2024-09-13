@@ -1,0 +1,81 @@
+
+" init (create a .git directory in current folder)
+
+
+" status (display the changes in current project and branch)
+
+
+" add (adding changes to storage mode)
+        file name or . (everything into directory)
+
+
+" commit ... (moving changes from storage mode to .git directory)
+        file name or '\ ' (everything into storage mode)
+        -m (writing a comment)
+        -a (if a file once with commands add and commit added to .git folder The next time you type this command, you don't need to 'add')
+
+
+" branch (display branchs list)
+        name (create a new branch with desired name)
+		-m (moving the name desired branch _ We must be in the desired branch)
+		-d (deleting desired branch _ We must not be in the desired branch)
+		-D (if not merged branch)
+
+
+" switch (moving between branchs)
+        name (desired branch)
+        -c (create a new branch and branch switch)
+
+
+" log (display current branch logs)
+        --all --graph (all branchs)
+
+
+" merge (adding a branch or branchs changes to desired branch - we must be in the desired branch)
+
+
+" diff (display the saveds on staging area and changes on working directory)
+	--staged (display files changes between .git and staging area)
+	HEAD (display files changes between .git and work space)
+	commit1..commit2 (display changes between two commit)
+	branch1..branch2 (display changes between two and others branch)
+
+
+" checkout ... (switch to desired commit)(... hash number desired commit)
+	(With this, a new branch is created, and then with the command switch you can return to the previous 'last commit' branch)
+	HEAD~... (work space return to the head commit)
+		(By typing this command, the workspace will return to the previous ... commits. example: ~2 = two below the head)
+
+
+" restore ... (desired file (...) on workspace return to last commit)
+	--staged ... (changes on stagespace return to last commit for the desired file (...))
+	--source ... ... (desired file(last...)return to desired commit(first ...))
+		HEAD~... (can use this instead of the desired commit hash number)
+			(by typing this command, the workspace will return to the previos ... commit. example: ~2 = two below the HEAD)
+
+
+" reset ... (Deleted from the current commit to the desired commit(... hash desired commit))
+	--hard ... (and returns the workspace change to the desired commit(... hash desired commit))
+
+
+" revert ... (create a new commit for changes desired commit and desired changes)
+
+
+" stash (save changes in a space other than stage space and commit(.git))
+	(for write comment must use 'save' command after 'stash')
+	pop (undo changes from stash space and delete changes on stashing)
+	apply (undo changes from stash space but without removing changes on stash space)(it is possible use this command in other branches)
+	list (display stashes) (with use 'apply ...' (... desired stash id) changes in workspace return to desired stash)
+	drop ... (by put stash id desired (instead ...) is deleted desired stash)
+	clear (delete the stash list)
+
+
+" clone (save a repository or project in local from version control system) (... URL)
+
+
+" remote (display remote URL's)
+	-v (verbose display)
+	add ... ... (add a remote URL to local (first ... remote name) (last ... URL))
+
+
+" push ... ... (add changes from local to vcs (first ... remote name) (last ... branch desired))
