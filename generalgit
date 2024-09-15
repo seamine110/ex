@@ -79,3 +79,9 @@
 
 
 " push ... ... (add changes from local to vcs (first ... remote name) (last ... branch desired))
+
+
+" fetch ... ... (changes the local return to last commit in remote branch. put not seeing(first... remote name)(last... branch))
+
+
+" pull ... ... (changes in commits and workspace returns to last commit in remote branch)
