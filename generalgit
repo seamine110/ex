@@ -85,3 +85,12 @@
 
 
 " pull ... ... (changes in commits and workspace returns to last commit in remote branch)
+
+
+" rebase ... (it's like a merge command(... desired branch))
+	-i ... (create a change in one or more commit(... options below))
+		(list commits in a text editor are open and with put desired words instead 'pick' desired process is done)
+		--root (all commit)
+		HEAD~... (desired commit. example: HEAD~2 = to two floors below the HEAD)
+		... (to desired commit(...))
+		
