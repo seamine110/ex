@@ -34,14 +34,15 @@
 " merge (adding a branch or branchs changes to desired branch - we must be in the desired branch)
 
 
-" diff (display the saveds on staging area and changes on working directory)
+" diff (display the saveds in staging area and changes in working directory)
 	--staged (display files changes between .git and staging area)
 	HEAD (display files changes between .git and work space)
 	commit1..commit2 (display changes between two commit)
+	tag1..tag2 (display changes between two tag)
 	branch1..branch2 (display changes between two and others branch)
 
 
-" checkout ... (switch to desired commit)(... hash number desired commit)
+" checkout ... (switch to desired commit)(... hash commit or tag name)
 	(With this, a new branch is created, and then with the command switch you can return to the previous 'last commit' branch)
 	HEAD~... (work space return to the head commit)
 		(By typing this command, the workspace will return to the previous ... commits. example: ~2 = two below the head)
@@ -79,6 +80,7 @@
 
 
 " push ... ... (add changes from local to vcs (first ... remote name) (last ... branch desired))
+		(instead (... branch desired) can be from (... desired tag name or --tag(all tag)) is use)
 
 
 " fetch ... ... (changes the local return to last commit in remote branch. put not seeing(first... remote name)(last... branch))
@@ -93,4 +95,17 @@
 		--root (all commit)
 		HEAD~... (desired commit. example: HEAD~2 = to two floors below the HEAD)
 		... (to desired commit(...))
+
 		
+" tag (display tags list)
+	... ... (create a new tag on desired commit(... tag name)(... hash commit)) (lightwieght mode)
+		(of course can be did not write (... hash commit) that in this case from HEAD commit is used)
+	-a (in this mode can be write a comment) (annotated mode)
+	-f (relocate desired tag from a commit to other commit)
+	-l (search between tags)
+	-d (delete desired tag)
+	show ... (display information desired tag (... hash commit))
+	commands dependency (checkout,diff,push)
+
+
+ #the end
